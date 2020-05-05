@@ -1,0 +1,70 @@
+<form method="post" id="frm-clientes" v-on:submit.prevent="guardarClientes" v-on:reset.prevent="limpiarClientes">
+    <div class="card text-white bg-info mb-3" style="max-width: 24rem;">
+        <div class="card-header">
+            MANTENIMIENTO DE CLIENTES
+
+            <button type="button" id="btn-close-clientes" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="card-body">
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        NOMBRE:
+                    </div>
+                    <div class="col">
+                        <input type="text" v-model="cliente.nombre" placeholder="Nombre del Cliente" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        DIRECCION:
+                    </div>
+                    <div class="col">
+                        <input type="text" v-model="cliente.direccion" placeholder="Direccion del Cliente" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        TELEFONO:
+                    </div>
+                    <div class="col">
+                        <input type="text" v-model="cliente.telefono" placeholder="0000-0000" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col">
+                    <div class="col">
+                        DUI:
+                    </div>
+                    <div class="col">
+                        <input type="text" v-model="cliente.dui" placeholder="00000000-0" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col text-center">
+                    <div class="col">
+                        <input id="btnGuardarClientes" type="submit" class="btn btn-outline-primary text-white" value="Guardar">
+                        <input type="reset" class="btn btn-outline-warning text-white" value="Limpiar">
+                        <input type="button" class="btn btn-outline-success mostrar-buscar-clientes text-white" data-modulo="clientes" data-form="buscar-clientes" value="Buscar" data-modulo="buscar-clientes" >
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 p-2">
+                <div class="row-col text-center">
+                    <div class="alert alert-sucess" role="alert">
+                        {{ cliente.msg }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="public/vistas/clientes/clientes.js"></script>

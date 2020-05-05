@@ -1,0 +1,38 @@
+<body class="bg-secondary">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary" style="background-color: #0298FF;">
+        <a class="navbar-brand" href="#">::.. APP Peliculas ..::</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mostrar-clientes" data-modulo="clientes" data-form="clientes" href="#">CLIENTES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mostrar-peliculas" data-modulo="peliculas" data-form="peliculas" href="#">PELICULAS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mostrar-alquiler" data-modulo="alquiler" data-form="alquiler" href="#">ALQUILER</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div id="modulos">
+          <div class="modulos" id="vistas-clientes"></div>
+          <div class="modulos" id="vistas-buscar-clientes"></div>
+          <div class="modulos" id="vistas-peliculas"></div>
+          <div class="modulos" id="vistas-buscar-peliculas"></div>
+          <div class="modulos" id="vistas-alquiler"></div>
+          <div class="modulos" id="vistas-buscar-alquiler"></div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script src="public/js/jquery-ui.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+      <script src="public/js/app.js"></script>
+  
+      <script src="https://unpkg.com/vue-select@3.0.0"></script>
+  </body>
+  </html>

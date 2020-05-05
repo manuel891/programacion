@@ -1,0 +1,43 @@
+<form method="post" id="frm-buscar-alquiler">
+    <div class="card text-white bg-info mb-3" style="max-width: 48rem;">
+        <div class="card-header">
+            BUSQUEDA DE CLIENTES
+
+            <button type="button" id="btn-close-buscar-alquiler" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="card-body">
+            <table id="tbl-buscar-clientes" class="table-striped table-dark table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th colspan="5">
+                            <input type="text" v-model="valor" v-on:keyup="buscarAlquiler" placeholder="ID Cliente o Valor" class="form-control">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>ID CLIENTE</th>
+                        <th>ID PELICULA</th>
+                        <th>FECHA PRESTAMO</th>
+                        <th>FECHA DEVOLUCION</th>
+                        <th>VALOR</th>  
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="mi_alquiler in mis_alquileres" :key="mi_alquiler.idCliente" v-on:click="modificarAlquiler(mi_alquiler)" >
+                       <td>{{ mi_alquiler.idCliente }}</td>
+                        <td>{{ mi_alquiler.idPelicula }}</td>
+                        <td>{{ mi_alquiler.fechaPrestamo }}</td>
+                        <td>{{ mi_alquiler.fechaDevolucion }}</td>
+                        <td>{{ mi_alquiler.valor }}</td>
+                        <td>
+                            <input v-on:click="eliminarAlquiler(mi_alquiler.idAlquiler)" type="button" class="btn btn-outline-danger text-white" value="Eliminar">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+<script src="public/vistas/alquiler/buscar-alquiler.js"></script>
